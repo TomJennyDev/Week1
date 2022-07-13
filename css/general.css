@@ -1,0 +1,187 @@
+/* VARIABLE */
+:root {
+  --primary: #e67e22;
+
+  --tints-1: #fdf2e9;
+  --tints-2: #fae5d3;
+  --tints-3: #eb984e;
+
+  --shades-1: #cf711f;
+  --shades-2: #45260a;
+
+  --greys-1: #888;
+  --greys-2: #767676;
+  --greys-3: #6f6f6f;
+  --greys-4: #555;
+
+  --white: #fff;
+
+  --text-color-primary: #333;
+
+  --text-spacing-1: -0.5px;
+  --text-spacing-2: 0.75px;
+  --text-lineheight-small: 1.05;
+  --text-lineheight-medium: 1.2;
+  --text-lineheight-large: 1.8;
+  --text-lineheight-paragraph: 1.6;
+
+  --border-radius-primary: 9px;
+  --border-radius-secondary: 11px;
+
+  --bg-color-1: #51cf66;
+  --bg-color-2: #94d82d;
+  --bg-color-3: #ffd43b;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%; /* 10px / 16px = 0.625 = 62.5% */
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+
+  /* Only works if there is nothing absolutely positioned in relation to body */
+  overflow-x: hidden;
+}
+
+/**************************/
+/* GENRAL REUSABLE COMPONENTS */
+/**************************/
+
+.wrapper {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+/* FLEX */
+
+.flex--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+/* HEADING  */
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: var(--text-color-primary);
+  letter-spacing: var(--text-spacing-1);
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+/* HELPER/SETTINGS CLASSES */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
+}
+
+/* BUTTON */
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  transition: all 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: var(--shades-1);
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: var(--white);
+  color: var(--greys-4);
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: var(--tints-1);
+
+  box-shadow: inset 0 0 0 3px var(--white);
+}
+
+.btn--form {
+  background-color: var(--shades-2);
+  color: var(--tints-1);
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: var(--white);
+  color: var(--greys-4);
+}
